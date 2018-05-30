@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
-    </div>
-    <script src="index.js"></script>
-</body>
+
+<html>
+    <head>
+        <title>Mashup</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <!-- Customer service -->  
+        <div  id="mypopup">
+            <div id="mypopup-title"></div>
+            <div id="mypopup-body"></div>
+            <div id="mypopup-footer"><button hidden id="back">Go back</button></div>
+         </div>
+       
+      <img  width="200" height="200" id="loader" src="https://i.pinimg.com/originals/d9/93/3c/d9933c4e2c272f33b74ef18cdf11a7d5.gif">
+          
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-8 ml-md-auto" >
+                    <button id="home-button">Reset search</button>
+                    <button id="zoomout">Home view</button>
+                </div>
+            </div>
+            <!-- Map container and main pad -->
+            <div class="row">
+                 <!-- mainpad container -->
+                 <div class="col-md-2 ml-md-auto" id="mainpad">
+                     
+                     <div class="row">
+                        <button>...</button>
+                     </div>
+                     <div class="row">
+                         <button>...</button>
+                     </div>
+                     <div class="row">
+                         <button>...</button>
+                     </div>
+                     <div class="row">
+                          <img title="Museums in NY" class="mainpad-icon" id="museums" src="https://png.icons8.com/office/1600/museum.png">
+                     </div>
+                     <div class="row">
+                          <img title="Neighboorhoods in NY" class="mainpad-icon" id="hoods" src="http://boulderna.org/wp-content/uploads/2016/06/neighborhood-icon.png">
+                     </div>
+                     
+                 </div>
+                <!-- map container -->
+                <div class="col-md-10 ml-md-auto" id="mapcontainer"></div>          
+            </div>
+      
+            
+        </div>
+        
+        
+        
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+          
+            
+       
+         <!-- I WROTE THIS LIBRERY -->
+        <script src="mypopup.js"></script>
+        <!-- I WROTE THIS LIBRERY -->
+        <script src="util.js"></script>
+        <!-- I WROTE THIS LIBRERY -->
+        <script src="chart.js"></script>  
+         <!-- I WROTE THIS LIBRERY -->
+        <script src="distMgr.js"></script>  
+        <script src="index.js"></script>
+         
+        
+        
+        <!-- Google Map -->
+   <script async defer
+	 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX56JjOQlfybN0ng0fYrOoIwvXo4hfg9c&libraries=geometry&callback=onGoogleMapResponse">
+	</script>
+        
+        
+    </body>
 </html>
