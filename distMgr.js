@@ -192,7 +192,7 @@ function addEventToDistrict(shape){
             google.maps.event.addListener(shape, "click", function(){
                 
               
-                   // alert(this.boroNumber + "-" + this.districtNumber );
+                    alert(this.boroNumber + "-" + this.districtNumber );
                    // alert(this.ELIU);
 
             });
